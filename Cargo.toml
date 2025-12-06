@@ -1,0 +1,26 @@
+[package]
+name = "rssreader"
+version = "0.1.0"
+edition = "2021"
+authors = ["ege <https://github.com/ege0x77czz>"]
+description = "aa lightweight rss/atom feed parser for rust."
+license = "MIT"
+repository = "https://github.com/ege0x77czz/rssreader-rs"
+keywords = ["rss", "feed", "reader", "atom", "cli"]
+categories = ["command-line-utilities", "web-programming"]
+
+[lib]
+name = "rssreader"
+path = "src/lib.rs"
+
+[[bin]]
+name = "rssreader"
+path = "src/main.rs"
+
+[dependencies]
+feed-rs = "2.3"
+reqwest = { version = "0.12", features = ["blocking"] }
+clap = { version = "4.5", features = ["derive"] }
+colored = "3.0"
+chrono = "0.4"
+anyhow = "1.0"
